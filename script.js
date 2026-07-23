@@ -1,15 +1,17 @@
-// Lineo Landing Page Interactive Behaviors
+// LINEO Landing Page Interactive Behaviors
 document.addEventListener('DOMContentLoaded', () => {
   
   // 1. Navbar Scroll Effect
   const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  }
 
   // 2. Interactive Kit Explorer Tab Switching
   const tabBtns = document.querySelectorAll('.tab-btn');
@@ -34,49 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Dropzone Hover & Simulated Drag Interactivity
-  const dropzone = document.getElementById('dropzone');
-  if (dropzone) {
-    dropzone.addEventListener('mouseenter', () => {
-      dropzone.style.borderColor = 'rgba(167, 139, 250, 0.7)';
-      dropzone.style.background = 'rgba(124, 58, 237, 0.08)';
-    });
-
-    dropzone.addEventListener('mouseleave', () => {
-      dropzone.style.borderColor = 'rgba(167, 139, 250, 0.3)';
-      dropzone.style.background = 'rgba(255, 255, 255, 0.03)';
-    });
-  }
-
-  // 4. CTA Form Submit Simulator
-  const ctaForm = document.getElementById('cta-form');
-  if (ctaForm) {
-    ctaForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const input = ctaForm.querySelector('input[type="email"]');
-      const submitBtn = ctaForm.querySelector('button');
-
-      if (input && input.value.trim() !== '') {
-        const originalText = submitBtn.innerText;
-        submitBtn.disabled = true;
-        submitBtn.innerText = 'Creating Account...';
-
-        setTimeout(() => {
-          submitBtn.innerText = '✨ Access Granted!';
-          submitBtn.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
-          input.value = '';
-          
-          setTimeout(() => {
-            submitBtn.innerText = originalText;
-            submitBtn.style.background = '';
-            submitBtn.disabled = false;
-          }, 3000);
-        }, 1200);
-      }
-    });
-  }
-
-  // 5. Mobile Toggle Placeholder
+  // 3. Mobile Navigation Toggle
   const mobileToggle = document.getElementById('mobile-toggle');
   const navLinks = document.getElementById('nav-links');
   if (mobileToggle && navLinks) {
@@ -86,11 +46,33 @@ document.addEventListener('DOMContentLoaded', () => {
       navLinks.style.flexDirection = 'column';
       navLinks.style.position = 'absolute';
       navLinks.style.top = '100%';
-      navLinks.style.left = '0';
       navLinks.style.right = '0';
-      navLinks.style.background = '#0B0F17';
+      navLinks.style.left = '0';
+      navLinks.style.background = '#F1F7F8';
       navLinks.style.padding = '20px';
-      navLinks.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
+      navLinks.style.borderBottom = '1px solid rgba(7, 80, 86, 0.1)';
+      navLinks.style.boxShadow = '0 10px 20px rgba(7, 80, 86, 0.08)';
     });
   }
+
+  // 4. Smooth Fade-in on Scroll Observer
+  const observerOptions = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.feature-card, .explorer-container, .cta-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
 });

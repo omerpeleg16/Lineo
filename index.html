@@ -1,459 +1,376 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lineo — Create Consistent Graphic Kits in Seconds</title>
-  <meta name="description" content="Lineo is an AI-powered platform for Instructional Designers and Learning Developers to create complete, visually consistent graphic kits from a single reference image.">
-  <meta name="keywords" content="Instructional Design, Graphic Kit, AI Design, Visual Consistency, Learning Developers, E-Learning Assets">
+  <title>Lineo — צרו קיט גרפי בסגנון אחיד לתוצרי למידה</title>
+  <meta name="description" content="Lineo היא פלטפורמת AI מתקדמת למעצבי הוראה ומפתחי למידה ליצירת ערכות גרפיות אחידות ושלמות מתמונת השראה אחת.">
+  <meta name="keywords" content="עיצוב הוראה, קיט גרפי, בינה מלאכותית, למידה דיגיטלית, אחידות ויזואלית, Lineo">
   
-  <!-- Google Fonts: Inter & Outfit -->
+  <!-- Google Fonts: Noto Sans Hebrew -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Ambient Glow Background Effects -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
+  <!-- Illuminated Radial Background Layer -->
+  <div class="illuminated-bg">
+    <div class="radial-glow glow-top"></div>
+    <div class="radial-glow glow-center"></div>
+  </div>
 
   <!-- Navigation Header -->
   <header class="navbar" id="navbar">
     <div class="container nav-container">
+      
       <a href="#" class="logo-link">
         <div class="logo-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logo-grad-1)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2 17L12 22L22 17" stroke="url(#logo-grad-2)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2 12L12 17L22 12" stroke="url(#logo-grad-3)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-            <defs>
-              <linearGradient id="logo-grad-1" x1="2" y1="2" x2="22" y2="12" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#A78BFA"/>
-                <stop offset="1" stop-color="#38BDF8"/>
-              </linearGradient>
-              <linearGradient id="logo-grad-2" x1="2" y1="17" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#818CF8"/>
-                <stop offset="1" stop-color="#34D399"/>
-              </linearGradient>
-              <linearGradient id="logo-grad-3" x1="2" y1="12" x2="22" y2="17" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#C084FC"/>
-                <stop offset="1" stop-color="#60A5FA"/>
-              </linearGradient>
-            </defs>
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="6" r="3.5" fill="#075056"/>
+            <circle cx="26" cy="16" r="3.5" fill="#075056"/>
+            <circle cx="16" cy="26" r="3.5" fill="#075056"/>
+            <circle cx="6" cy="16" r="3.5" fill="#075056"/>
+            <path d="M16 9.5V22.5M9.5 16H22.5" stroke="#075056" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
         <span class="logo-text">Lineo</span>
       </a>
 
       <nav class="nav-links" id="nav-links">
-        <a href="#features">Features</a>
-        <a href="#kit-preview">Interactive Demo</a>
-        <a href="#audience">For Designers</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#features">מה לקיט?</a>
+        <a href="#kit-preview">סייר הקיטים</a>
+        <a href="#audience">למעצבי הוראה</a>
+        <a href="#about">אודות</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#" class="btn btn-secondary">Sign In</a>
-        <a href="#cta" class="btn btn-primary">Start Free Trial</a>
+        <a href="#cta" class="btn btn-secondary">המשך קיט קיים</a>
+        <a href="#cta" class="btn btn-primary">קיט חדש</a>
       </div>
 
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="תפריט ניווט">
         <span></span>
         <span></span>
         <span></span>
       </button>
+
     </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- Premium Hero Section -->
+    <section class="hero-section" id="hero">
       <div class="container hero-container">
         
-        <div class="hero-badge">
-          <span class="sparkle">✨</span>
-          <span>Built for Instructional Designers & Learning Developers</span>
-        </div>
-
-        <h1 class="hero-title">
-          One reference image.<br>
-          <span class="text-gradient">An entire graphic kit.</span>
-        </h1>
-
-        <p class="hero-subtitle">
-          Transform a single style reference into production-ready characters, icons, and UI components. Maintain 100% visual consistency without spending hours in illustrator software.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#cta" class="btn btn-primary btn-lg">
-            <span>Create Your First Kit Free</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="#kit-preview" class="btn btn-glass btn-lg">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
-            <span>See Live Demo</span>
-          </a>
-        </div>
-
-        <!-- Interactive Hero Showcase -->
-        <div class="hero-showcase-card glass-panel">
-          <div class="showcase-header">
-            <div class="window-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <div class="showcase-title">Lineo Kit Generator — Active Workspace</div>
-            <div class="status-badge"><span class="pulse-dot"></span> AI Engine Ready</div>
+        <!-- Right Side: Hero Content (RTL) -->
+        <div class="hero-content">
+          
+          <div class="brand-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+            <span>AI למעצבי הוראה ומפתחי למידה</span>
           </div>
 
-          <div class="showcase-content">
-            <!-- Input Side -->
-            <div class="showcase-side input-side">
-              <div class="side-label">1. Upload Reference Image</div>
-              <div class="dropzone-box" id="dropzone">
-                <div class="reference-preview-image">
-                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#hero-img-grad)" stroke-width="1.5">
-                    <rect x="3" y="3" width="18" height="18" rx="4"/>
-                    <circle cx="8.5" cy="8.5" r="1.5"/>
-                    <polyline points="21 15 16 10 5 21"/>
-                  </svg>
-                  <defs>
-                    <linearGradient id="hero-img-grad" x1="0" y1="0" x2="24" y2="24">
-                      <stop stop-color="#C084FC"/>
-                      <stop offset="1" stop-color="#38BDF8"/>
-                    </linearGradient>
-                  </defs>
-                </div>
-                <div class="dropzone-text">
-                  <strong>Reference_Style_01.png</strong>
-                  <span>Flat Modern Tech vector illustration style</span>
-                </div>
-                <div class="style-tags">
-                  <span class="tag">#ModernFlat</span>
-                  <span class="tag">#SoftPastel</span>
-                </div>
+          <h1 class="hero-title">
+            צרו קיט גרפי*<br>
+            <span class="highlight-teal">בסגנון אחיד</span> לתוצרי למידה
+          </h1>
+
+          <p class="hero-subtitle">
+            מתמונת השראה אחת לרכיבים מוכנים לשימוש. דמויות מלוות, אייקונים וכפתורים בסגנון ויזואלי אחיד ושלם ברגע.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#cta" class="btn btn-primary btn-lg">
+              <span>קיט חדש</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l-7 7 7 7"/></svg>
+            </a>
+            <a href="#kit-preview" class="btn btn-secondary btn-lg">
+              <span>המשך קיט קיים</span>
+            </a>
+          </div>
+
+          <div class="hero-disclaimer">
+            * קיט גרפי כולל דמויות מלוות, אייקונים וכפתורים באותו סגנון, המוכנים לשימוש בתוצרי למידה.
+          </div>
+
+        </div>
+
+        <!-- Left Side: Product Showcase & Dynamic Masonry Carousel -->
+        <div class="hero-visual-showcase">
+          <div class="app-frame-window">
+            
+            <div class="app-frame-header">
+              <div class="window-controls">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="app-frame-title">LINEO Graphic Kit Engine</div>
+              <div class="app-live-status">
+                <span class="pulse-indicator"></span>
+                <span>סנכרון סגנון פעיל</span>
               </div>
             </div>
 
-            <!-- Process Arrow -->
-            <div class="process-arrow">
-              <div class="arrow-line"></div>
-              <div class="arrow-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <!-- Dense Dynamic Masonry Gallery -->
+            <div class="masonry-gallery-viewport">
+              <div class="masonry-column masonry-col-1">
+                
+                <!-- Kit Card 1: Chameleon / Lizard Character & Icons -->
+                <div class="kit-card">
+                  <div class="kit-card-header">
+                    <span class="kit-title">קיט דמות: זקית תלת-ממד</span>
+                    <span class="kit-tag">#3D_Character</span>
+                  </div>
+                  <div class="kit-visual-grid">
+                    <div class="character-preview bg-mint">🦎</div>
+                    <div class="icons-mini-row">
+                      <span class="mini-icon">🌐</span>
+                      <span class="mini-icon">💡</span>
+                      <span class="mini-icon">⏱️</span>
+                      <span class="mini-icon">👥</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Kit Card 2: Vector Woman Character & Scene -->
+                <div class="kit-card">
+                  <div class="kit-card-header">
+                    <span class="kit-title">קיט וקטורי: מנחה דיגיטלית</span>
+                    <span class="kit-tag">#FlatVector</span>
+                  </div>
+                  <div class="kit-visual-grid">
+                    <div class="character-preview bg-soft">👩‍💼</div>
+                    <div class="icons-mini-row">
+                      <span class="mini-icon">📩</span>
+                      <span class="mini-icon">📑</span>
+                      <span class="mini-icon">⚙️</span>
+                      <span class="mini-icon">💬</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Kit Card 3: Robot Character -->
+                <div class="kit-card">
+                  <div class="kit-card-header">
+                    <span class="kit-title">קיט חדשנות: רובוט עוזר</span>
+                    <span class="kit-tag">#Tech_Robot</span>
+                  </div>
+                  <div class="kit-visual-grid">
+                    <div class="character-preview bg-mint">🤖</div>
+                    <div class="icons-mini-row">
+                      <span class="mini-icon">🚀</span>
+                      <span class="mini-icon">🔋</span>
+                      <span class="mini-icon">📡</span>
+                    </div>
+                  </div>
+                </div>
+
               </div>
-              <span class="arrow-text">Instant AI Match</span>
+
+              <div class="masonry-column masonry-col-2">
+                
+                <!-- Kit Card 4: Star Character & Buttons -->
+                <div class="kit-card">
+                  <div class="kit-card-header">
+                    <span class="kit-title">קיט רטרו: כוכב למידה</span>
+                    <span class="kit-tag">#RetroStar</span>
+                  </div>
+                  <div class="kit-visual-grid">
+                    <div class="character-preview bg-soft">⭐</div>
+                    <div class="buttons-mini-col">
+                      <button class="mini-btn mini-btn-teal">התחל מודול</button>
+                      <button class="mini-btn mini-btn-mint">משוב</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Kit Card 5: Developer & UI Buttons -->
+                <div class="kit-card">
+                  <div class="kit-card-header">
+                    <span class="kit-title">קיט הדרכה: מפתח תוכנה</span>
+                    <span class="kit-tag">#Corporate</span>
+                  </div>
+                  <div class="kit-visual-grid">
+                    <div class="character-preview bg-mint">🧑‍💻</div>
+                    <div class="buttons-mini-col">
+                      <button class="mini-btn mini-btn-teal">אישור</button>
+                      <button class="mini-btn mini-btn-mint">חזרה</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Kit Card 6: Badge Icons -->
+                <div class="kit-card">
+                  <div class="kit-card-header">
+                    <span class="kit-title">אייקונים וכפתורי ניווט</span>
+                    <span class="kit-tag">#UI_Elements</span>
+                  </div>
+                  <div class="kit-visual-grid">
+                    <div class="icons-mini-row">
+                      <span class="mini-icon">🏆</span>
+                      <span class="mini-icon">🎯</span>
+                      <span class="mini-icon">📌</span>
+                      <span class="mini-icon">🔍</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
-            <!-- Output Side -->
-            <div class="showcase-side output-side">
-              <div class="side-label">2. Generated Unified Graphic Kit</div>
-              <div class="output-grid-mini">
-                <div class="mini-asset-card">
-                  <div class="asset-icon character-icon">🧑‍💻</div>
-                  <span>Character (Dev)</span>
-                </div>
-                <div class="mini-asset-card">
-                  <div class="asset-icon icon-asset">⚡</div>
-                  <span>Tech Icon</span>
-                </div>
-                <div class="mini-asset-card">
-                  <div class="asset-icon button-asset">🔘</div>
-                  <span>UI Button</span>
-                </div>
-                <div class="mini-asset-card">
-                  <div class="asset-icon character-icon">👩‍💼</div>
-                  <span>Character (Leader)</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Social Proof Metrics -->
-    <section class="metrics-section">
-      <div class="container">
-        <div class="metrics-grid">
-          <div class="metric-card glass-card">
-            <div class="metric-value">10x</div>
-            <div class="metric-label">Faster Asset Production</div>
-          </div>
-          <div class="metric-card glass-card">
-            <div class="metric-value">100%</div>
-            <div class="metric-label">Visual Style Consistency</div>
-          </div>
-          <div class="metric-card glass-card">
-            <div class="metric-value">0</div>
-            <div class="metric-label">Illustration Skills Required</div>
-          </div>
-          <div class="metric-card glass-card">
-            <div class="metric-value">10,000+</div>
-            <div class="metric-label">Kits Created by Designers</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Value Pillars / Features -->
+    <!-- Value Proposition Cards -->
     <section class="features-section" id="features">
       <div class="container">
+        
         <div class="section-header center">
-          <div class="section-tag">Why Lineo?</div>
-          <h2 class="section-title">Designed specifically for e-learning creators</h2>
-          <p class="section-subtitle">Stop settling for mismatched stock assets. Lineo ensures every icon, avatar, and button in your course looks like it was crafted by the same designer.</p>
+          <div class="section-tag">למה LINEO?</div>
+          <h2 class="section-title">כל רכיבי העיצוב לתוצר הלמידה במקום אחד</h2>
+          <p class="section-subtitle">במקום לבלות שעות בחיפוש אלמנטים לא קשורים, LINEO מפיקה עבורכם ערכה שלמה בעלת שפה חזותית אחידה.</p>
         </div>
 
         <div class="features-grid">
           
-          <div class="feature-card glass-card">
-            <div class="feature-icon-wrapper purple">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z"/><path d="M12 8v4l3 3"/></svg>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#075056" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
             </div>
-            <h3>Save Hours of Manual Editing</h3>
-            <p>No more tweaking colors, line weights, or art styles in Illustrator. Upload your brand reference once and generate all assets in one click.</p>
+            <h3>תמונת השראה אחת</h3>
+            <p>מעלים תמונה או סגנון אהוב, וה-AI לומד את הסטייל, מפתח הצבעים וקו העיצוב במדויק.</p>
           </div>
 
-          <div class="feature-card glass-card">
-            <div class="feature-icon-wrapper cyan">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#075056" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </div>
-            <h3>Guaranteed Visual Consistency</h3>
-            <p>Our custom style-alignment model matches line weights, color palettes, shadow depth, and corner radiuses across every generated asset.</p>
+            <h3>אחידות ויזואלית מלאה</h3>
+            <p>דמויות, אייקונים וכפתורים שנראים כאילו עוצבו על ידי אותו מעצב בדיוק עבור הקורס שלכם.</p>
           </div>
 
-          <div class="feature-card glass-card">
-            <div class="feature-icon-wrapper green">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#075056" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             </div>
-            <h3>Production-Ready Export</h3>
-            <p>Export transparent PNGs, scalable SVGs, or WebP files ready to drop straight into Articulate Storyline, Adobe Captivate, or Canva.</p>
+            <h3>ייצוא מוכן לפיתוח</h3>
+            <p>קבצי PNG שקופים ו-SVG מוכנים להורדה ולייבוא ישיר ל-Storyline, Captivate או Canva.</p>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- Interactive Graphic Kit Explorer -->
+    <!-- Interactive Kit Explorer -->
     <section class="kit-explorer-section" id="kit-preview">
       <div class="container">
+        
         <div class="section-header center">
-          <div class="section-tag">Interactive Explorer</div>
-          <h2 class="section-title">Explore a Generated Graphic Kit</h2>
-          <p class="section-subtitle">Select an asset category below to see how Lineo maintains style harmony across different asset types.</p>
+          <div class="section-tag">סייר הקיטים</div>
+          <h2 class="section-title">סקירת רכיבי הקיט המופקים</h2>
+          <p class="section-subtitle">בחרו קטגוריה כדי לראות כיצד השפה הוויזואלית נשמרת לרוחב כל הרכיבים.</p>
         </div>
 
-        <div class="explorer-card glass-panel">
-          <!-- Category Tabs -->
+        <div class="explorer-container">
           <div class="explorer-tabs">
-            <button class="tab-btn active" data-tab="characters">
-              <span>🧑‍💼 Characters</span>
-            </button>
-            <button class="tab-btn" data-tab="icons">
-              <span>⚡ Icons & Symbols</span>
-            </button>
-            <button class="tab-btn" data-tab="buttons">
-              <span>🔘 UI Buttons & Badges</span>
-            </button>
+            <button class="tab-btn active" data-tab="characters">🧑‍💼 דמויות מלוות</button>
+            <button class="tab-btn" data-tab="icons">⚡ אייקונים וסמלים</button>
+            <button class="tab-btn" data-tab="buttons">🔘 כפתורי UI ומקשים</button>
           </div>
 
-          <!-- Dynamic Display Grid -->
           <div class="tab-content active" id="tab-characters">
-            <div class="assets-display-grid">
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-1">
-                  <div class="avatar-emoji">👩‍💻</div>
-                </div>
-                <div class="asset-info">
-                  <h4>Instructional Lead</h4>
-                  <span class="asset-badge">Character Asset</span>
-                </div>
+            <div class="assets-grid">
+              <div class="asset-card">
+                <div class="asset-visual bg-mint">👩‍🏫</div>
+                <h4>מרצה / מנחה</h4>
+                <span>דמות מלווה לקורס</span>
               </div>
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-2">
-                  <div class="avatar-emoji">👨‍🏫</div>
-                </div>
-                <div class="asset-info">
-                  <h4>Course Presenter</h4>
-                  <span class="asset-badge">Character Asset</span>
-                </div>
+              <div class="asset-card">
+                <div class="asset-visual bg-soft">👨‍💻</div>
+                <h4>מפתח מערכות</h4>
+                <span>דמות מלווה לקורס</span>
               </div>
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-3">
-                  <div class="avatar-emoji">👩‍🎓</div>
-                </div>
-                <div class="asset-info">
-                  <h4>Learner Avatar</h4>
-                  <span class="asset-badge">Character Asset</span>
-                </div>
+              <div class="asset-card">
+                <div class="asset-visual bg-mint">🕵️‍♀️</div>
+                <h4>מומחית אבטחה</h4>
+                <span>דמות מלווה לקורס</span>
               </div>
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-4">
-                  <div class="avatar-emoji">🕵️‍♂️</div>
-                </div>
-                <div class="asset-info">
-                  <h4>Compliance Assessor</h4>
-                  <span class="asset-badge">Character Asset</span>
-                </div>
+              <div class="asset-card">
+                <div class="asset-visual bg-soft">👨‍🎓</div>
+                <h4>לומד מצטיין</h4>
+                <span>דמות מלווה לקורס</span>
               </div>
             </div>
           </div>
 
           <div class="tab-content" id="tab-icons">
-            <div class="assets-display-grid">
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-icon-1">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </div>
-                <div class="asset-info">
-                  <h4>Quiz Completion</h4>
-                  <span class="asset-badge">Vector Icon</span>
-                </div>
+            <div class="assets-grid">
+              <div class="asset-card">
+                <div class="asset-visual bg-mint">🎯</div>
+                <h4>יעד ואתגר</h4>
+                <span>אייקון וקטורי</span>
               </div>
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-icon-2">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <div class="asset-info">
-                  <h4>Achievement Star</h4>
-                  <span class="asset-badge">Vector Icon</span>
-                </div>
+              <div class="asset-card">
+                <div class="asset-visual bg-soft">💡</div>
+                <h4>טיפ ורעיון</h4>
+                <span>אייקון וקטורי</span>
               </div>
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-icon-3">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                </div>
-                <div class="asset-info">
-                  <h4>Course Module</h4>
-                  <span class="asset-badge">Vector Icon</span>
-                </div>
+              <div class="asset-card">
+                <div class="asset-visual bg-mint">🏆</div>
+                <h4>הישג וסיום</h4>
+                <span>אייקון וקטורי</span>
               </div>
-              <div class="asset-display-item">
-                <div class="asset-avatar-box gradient-icon-4">
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div class="asset-info">
-                  <h4>Timer / Duration</h4>
-                  <span class="asset-badge">Vector Icon</span>
-                </div>
+              <div class="asset-card">
+                <div class="asset-visual bg-soft">📚</div>
+                <h4>חומרי עזר</h4>
+                <span>אייקון וקטורי</span>
               </div>
             </div>
           </div>
 
           <div class="tab-content" id="tab-buttons">
-            <div class="assets-display-grid">
-              <div class="asset-display-item">
-                <div class="ui-button-demo btn-demo-primary">
-                  <span>Continue Module</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </div>
-                <div class="asset-info">
-                  <h4>Primary Navigation Button</h4>
-                  <span class="asset-badge">UI Component</span>
-                </div>
+            <div class="assets-grid">
+              <div class="asset-card">
+                <button class="btn btn-primary">המשך למודול הבא</button>
+                <h4>כפתור ניווט ראשי</h4>
+                <span>רכיב ממשק</span>
               </div>
-              <div class="asset-display-item">
-                <div class="ui-button-demo btn-demo-success">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                  <span>Submit Quiz</span>
-                </div>
-                <div class="asset-info">
-                  <h4>Success State Button</h4>
-                  <span class="asset-badge">UI Component</span>
-                </div>
+              <div class="asset-card">
+                <button class="btn btn-secondary">חזרה לתוכן העניינים</button>
+                <h4>כפתור משני</h4>
+                <span>רכיב ממשק</span>
               </div>
-              <div class="asset-display-item">
-                <div class="ui-button-demo btn-demo-glass">
-                  <span>Review Answers</span>
-                </div>
-                <div class="asset-info">
-                  <h4>Glassmorphic Pill</h4>
-                  <span class="asset-badge">UI Component</span>
-                </div>
-              </div>
-              <div class="asset-display-item">
-                <div class="ui-button-demo btn-demo-gradient">
-                  <span>Start Assessment</span>
-                </div>
-                <div class="asset-info">
-                  <h4>Gradient Accent Button</h4>
-                  <span class="asset-badge">UI Component</span>
-                </div>
+              <div class="asset-card">
+                <button class="btn btn-primary" style="background:#059669;">הגש לומדה ✓</button>
+                <h4>כפתור אישור</h4>
+                <span>רכיב ממשק</span>
               </div>
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- Target Audience Section -->
-    <section class="audience-section" id="audience">
-      <div class="container">
-        <div class="audience-grid">
-          
-          <div class="audience-content">
-            <div class="section-tag">Made For You</div>
-            <h2 class="section-title">Focus on instruction. Let Lineo handle the graphics.</h2>
-            <p class="audience-desc">
-              As an Instructional Designer or Learning Developer, your priority is constructing clear, engaging learning experiences. You shouldn't have to moonlight as a full-time vector illustrator just to keep your course slides visually cohesive.
-            </p>
-            
-            <ul class="benefit-list">
-              <li>
-                <div class="check-icon">✓</div>
-                <span><strong>No design background required:</strong> Simply upload an image you like.</span>
-              </li>
-              <li>
-                <div class="check-icon">✓</div>
-                <span><strong>Seamless Storyline & Captivate integration:</strong> Direct export with alpha channels.</span>
-              </li>
-              <li>
-                <div class="check-icon">✓</div>
-                <span><strong>Unified client branding:</strong> Deliver cohesive graphic kits tailored for every corporate client.</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="audience-visual glass-panel">
-            <div class="quote-card">
-              <p>"Lineo cut our course visual creation time from 3 days to under 20 minutes. The consistency across every single slide icon is remarkable."</p>
-              <div class="quote-author">
-                <div class="author-avatar">👩‍💼</div>
-                <div>
-                  <strong>Sarah Jenkins</strong>
-                  <span>Senior Instructional Designer @ EduTech</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Final Call to Action Section -->
+    <!-- Call to Action Section -->
     <section class="cta-section" id="cta">
       <div class="container">
-        <div class="cta-box glass-panel">
-          <div class="cta-glow"></div>
-          <h2 class="cta-title">Ready to transform one image into an entire graphic kit?</h2>
-          <p class="cta-subtitle">Join thousands of Instructional Designers who create beautiful, consistent learning assets in seconds.</p>
+        <div class="cta-card">
+          <h2 class="cta-title">מוכנים ליצור את הקיט הגרפי הראשון שלכם?</h2>
+          <p class="cta-subtitle">הצטרפו למעצבי הוראה ומפתחי למידה שכבר חוסכים שעות של עבודת עיצוב ידנית.</p>
           
-          <form class="cta-form" id="cta-form">
-            <input type="email" placeholder="Enter your work email..." required class="cta-input">
-            <button type="submit" class="btn btn-primary btn-lg">Get Started Free</button>
-          </form>
-          
-          <div class="cta-microcopy">
-            <span>✓ No credit card required</span>
-            <span>✓ Free 14-day trial</span>
-            <span>✓ Instant SVG & PNG exports</span>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-primary btn-lg">קיט חדש</a>
+            <a href="#" class="btn btn-secondary btn-lg">המשך קיט קיים</a>
           </div>
         </div>
       </div>
@@ -464,40 +381,13 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#" class="logo-link">
-          <div class="logo-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#footer-grad)" stroke-width="2"/><defs><linearGradient id="footer-grad" x1="2" y1="2" x2="22" y2="12"><stop stop-color="#A78BFA"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs></svg>
-          </div>
-          <span class="logo-text">Lineo</span>
-        </a>
-        <p>Empowering Instructional Designers with AI-driven graphic kit consistency.</p>
+      <div class="footer-logo">
+        <span class="logo-text">Lineo</span>
+        <p>פלטפורמת AI ליצירת ערכות גרפיות אחידות לתוצרי למידה.</p>
       </div>
-
-      <div class="footer-links-group">
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="#features">Features</a>
-          <a href="#kit-preview">Kit Explorer</a>
-          <a href="#pricing">Pricing</a>
-        </div>
-        <div class="footer-col">
-          <h4>Resources</h4>
-          <a href="#">E-Learning Templates</a>
-          <a href="#">Style Guide</a>
-          <a href="#">Documentation</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#">About Lineo</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Privacy Policy</a>
-        </div>
+      <div class="footer-copyright">
+        © 2026 LINEO Platform. כל הזכויות שמורות.
       </div>
-    </div>
-    
-    <div class="container footer-bottom">
-      <p>© 2026 Lineo Platform Inc. All rights reserved.</p>
     </div>
   </footer>
 
