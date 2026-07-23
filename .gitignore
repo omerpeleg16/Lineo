@@ -1,0 +1,11 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node dependencies (if added later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
